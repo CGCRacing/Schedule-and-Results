@@ -348,6 +348,20 @@
   .tab-panel { display: none; }
   .tab-panel.active { display: block; }
 
+  /* Responsive tab labels — long names break on narrow screens, swap to short versions */
+  .tab-btn .tab-short { display: none; }
+  .tab-btn .tab-full  { display: inline; }
+  @media (max-width: 700px) {
+    .tab-btn {
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+      padding: 12px 8px;
+      min-width: auto;
+    }
+    .tab-btn .tab-full  { display: none; }
+    .tab-btn .tab-short { display: inline; }
+  }
+
   /* ── SPONSOR CLICK-TO-EXPAND (per-row dropdowns) ── */
   .sponsors-stack {
     display: flex;
@@ -909,11 +923,11 @@
 
 
 <nav class="tab-nav" role="tablist">
-  <button class="tab-btn active" data-tab="schedule" role="tab">🏁 Schedule</button>
-  <button class="tab-btn" data-tab="photos" role="tab">📷 Photos</button>
-  <button class="tab-btn" data-tab="sponsors" role="tab">🤝 Sponsors</button>
-  <button class="tab-btn" data-tab="drivers" role="tab">🏎️ Meet the Team</button>
-  <button class="tab-btn" data-tab="rfac" role="tab">🎗️ Racing for a Cure</button>
+  <button class="tab-btn active" data-tab="schedule" role="tab"><span class="tab-full">🏁 Schedule</span><span class="tab-short">🏁 Schedule</span></button>
+  <button class="tab-btn" data-tab="photos" role="tab"><span class="tab-full">📷 Photos</span><span class="tab-short">📷 Photos</span></button>
+  <button class="tab-btn" data-tab="sponsors" role="tab"><span class="tab-full">🤝 Sponsors</span><span class="tab-short">🤝 Sponsors</span></button>
+  <button class="tab-btn" data-tab="drivers" role="tab"><span class="tab-full">🏎️ Meet the Team</span><span class="tab-short">🏎️ Team</span></button>
+  <button class="tab-btn" data-tab="rfac" role="tab"><span class="tab-full">🎗️ Racing for a Cure</span><span class="tab-short">🎗️ RFAC</span></button>
 </nav>
 
 <div class="container">
