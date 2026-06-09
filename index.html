@@ -198,9 +198,14 @@
   }
   .gallery-item img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
     display: block;
     transition: transform 0.3s ease;
+  }
+  .gallery-wide img {
+    aspect-ratio: 21 / 9;
   }
   .gallery-item:hover img { transform: scale(1.03); }
   .gallery-caption {
@@ -1603,28 +1608,13 @@
       <span class="flag-icon" style="font-size:1.1rem">📸</span>
 </div>
 <div class="gallery-grid">
-
-</div>
-</div>
-
-</div>
-</div>
-
-<!-- ── 2025 SEASON HIGHLIGHTS ── -->
-<div class="gallery-section">
-<div class="sponsors-header" style="margin-bottom:16px;">
-<span class="flag-icon" style="font-size:1.1rem">📸</span>
-      From The Track — 2025 Season Highlights
-      <span class="flag-icon" style="font-size:1.1rem">📸</span>
-</div>
-<div class="gallery-grid">
 <div class="gallery-item gallery-wide">
 <img alt="#81 in Victory Lane" loading="lazy" src="May 30th 2026/81-in-victory-lane.jpg"/>
 <div class="gallery-caption">#81 in Victory Lane — Sauble Speedway</div>
 </div>
 <div class="gallery-item gallery-wide">
 <img alt="CGC Racing team shot" loading="lazy" src="May 30th 2026/cgc-racing-team-shot.jpg"/>
-<div class="gallery-caption">The CGC Racing crew — #81, #16s &amp; #82</div>
+<div class="gallery-caption">The CGC Racing crew — pit lane before the green</div>
 </div>
 <div class="gallery-item">
 <img alt="#82 on track" loading="lazy" src="May 30th 2026/82-on-track.jpg"/>
@@ -1639,6 +1629,8 @@
 <div class="gallery-caption">#5 Hot Rod — Tanner</div>
 </div>
 </div>
+</div>
+
 </div>
 </div>
 <div class="tab-panel" data-panel="sponsors">
