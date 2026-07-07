@@ -184,7 +184,7 @@
   .gallery-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto auto;
+    grid-auto-flow: dense;
     gap: 10px;
   }
   .gallery-wide {
@@ -207,10 +207,6 @@
     display: block;
     transition: transform 0.3s ease;
   }
-  .gallery-grid .gallery-wide:nth-child(1) img,
-  .gallery-grid .gallery-wide:nth-child(2) img {
-    height: 300px;
-  }
   .gallery-item:hover img { transform: scale(1.03); }
   .gallery-caption {
     position: absolute;
@@ -225,12 +221,10 @@
     padding: 18px 10px 8px;
   }
   @media (max-width: 700px) {
-    .gallery-grid { grid-template-columns: 1fr 1fr; }
+    .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-flow: dense; }
     .gallery-grid .gallery-wide:nth-child(1),
     .gallery-grid .gallery-wide:nth-child(2) { grid-column: span 2; }
     .gallery-item img { height: 180px; }
-    .gallery-grid .gallery-wide:nth-child(1) img,
-    .gallery-grid .gallery-wide:nth-child(2) img { height: 200px; }
   }
 
   /* ── SPONSORS ── */
@@ -1303,6 +1297,33 @@
 <span class="car-tag car-bone">#84 TBD</span>
 <span class="car-tag car-graydon">#16s Graydon</span>
 <span class="car-tag car-hotrod">#5 Tanner</span>
+
+</div>
+<div class="results-row">
+<span class="results-label">Heats</span>
+<span class="result-tag dns"><span class="pos">DNS</span>#81 Tanner</span>
+<span class="result-tag"><span class="pos">P2</span>#82 Matt</span>
+<span class="result-tag"><span class="pos">P7</span>#83 Dan</span>
+</div>
+<div class="results-row">
+<span class="results-label">B Main</span>
+<span class="result-tag"><span class="pos">P7</span>#83 Dan</span>
+<span class="result-tag"><span class="pos">P8</span>#16s Graydon</span>
+</div>
+<div class="results-row">
+<span class="results-label">Feature</span>
+<span class="result-tag dns"><span class="pos">DNS</span>#81 Tanner</span>
+<span class="result-tag"><span class="pos">P15</span>#82 Matt</span>
+<span class="result-tag"><span class="pos">P10</span>#83 Dan</span>
+<span class="result-tag dns"><span class="pos">DNF</span>#16s Graydon</span>
+</div>
+<div class="results-row">
+<span class="results-label">Hot Rod Feature 1</span>
+<span class="result-tag dns"><span class="pos">DNF</span>#5 Tanner</span>
+</div>
+<div class="results-row">
+<span class="results-label">Hot Rod Feature 2</span>
+<span class="result-tag dns"><span class="pos">DNF</span>#5 Tanner</span>
 </div>
 </div>
 <!-- July 25 -->
@@ -1627,6 +1648,25 @@
 <!-- ── PHOTO GALLERY ── -->
 <!-- NEWEST WEEK ALWAYS GOES ON TOP. Older weeks/seasons appear below. -->
 
+<!-- ── 2026 · JULY 4 — SUMMER VACATION NIGHT ── -->
+<div class="gallery-section">
+<div class="sponsors-header" style="margin-bottom:16px;">
+<span class="flag-icon" style="font-size:1.1rem">📸</span>
+      July 4 — Summer Vacation Night
+      <span class="flag-icon" style="font-size:1.1rem">📸</span>
+</div>
+<div class="gallery-grid">
+<div class="gallery-item gallery-wide"><img alt="Danny &quot;Dynamite&quot; Boyd in the 83 on track — Photo credit: Wilson's Photography" loading="lazy" src="July 4th/FB_IMG_1783257335348.jpg"/></div>
+<div class="gallery-item"><img alt="Tanner Holmes in the 5 Hot Rod lined up in the pack — Photo credit: Danielle McPherson Photography &amp; Writing" loading="lazy" src="July 4th/FB_IMG_1783286504393.jpg"/></div>
+<div class="gallery-item"><img alt="Matt in the 82 lined up beside Jeff Rumble's 42 for Heat 1 — Photo credit: Danielle McPherson Photography &amp; Writing" loading="lazy" src="July 4th/FB_IMG_1783286520179.jpg"/></div>
+<div class="gallery-item gallery-wide"><img alt="Tanner Holmes in the 5 Hot Rod on track — Photo credit: Ben Stott Photography" loading="lazy" src="July 4th/FB_IMG_1783386722181.jpg"/></div>
+<div class="gallery-item"><img alt="Matt in the 82 racing under the lights" loading="lazy" src="July 4th/FB_IMG_1783431816206.jpg"/></div>
+<div class="gallery-item"><img alt="Pack racing under the lights — the 81 and 82 mixing it up in the feature" loading="lazy" src="July 4th/FB_IMG_1783432081275.jpg"/></div>
+<div class="gallery-item gallery-wide"><img alt="Hot Rods lining up on track ahead of the feature" loading="lazy" src="July 4th/PXL_20260704_224014299.MP.jpg"/></div>
+<div class="gallery-item"><img alt="Danny &quot;Dynamite&quot; Boyd in the 83 racing side-by-side" loading="lazy" src="July 4th/received_1657467248667345.jpeg"/></div>
+</div>
+</div>
+
 <!-- ── 2026 · JUNE 27–28 — SHOWDOWN IN GREY BRUCE ── -->
 <div class="gallery-section">
 <div class="sponsors-header" style="margin-bottom:16px;">
@@ -1644,7 +1684,7 @@
 <div class="gallery-item"><img alt="Tanner in the 81 Heat Race win — Photo credit: Ben Stott Photography" loading="lazy" src="June 27th and 28th/Credit to Ben Stott Photography - Tanner in the 81 Heat Race win.jpg"/></div>
 <div class="gallery-item"><img alt="Tanner in the 81 racing Savanah Finley in the 57 — Photo credit: Ben Stott Photography" loading="lazy" src="June 27th and 28th/Credit to Ben Stott Photography - Tanner in the 81 racing Savanah Finley in the 57.jpg"/></div>
 <div class="gallery-item"><img alt="Tanner in the 81 — Photo credit: Ben Stott Photography" loading="lazy" src="June 27th and 28th/Credit to Ben Stott Photography - Tanner in the 81.jpg"/></div>
-<div class="gallery-item"><img alt="Tanner in the 81 racing the #90 of Gary — Photo credit: Feeny Call Photography" loading="lazy" src="June 27th and 28th/Credit to Feeny Call Photography - Tanner in the 81 racing the #90 of Gary.jpg"/></div>
+<div class="gallery-item"><img alt="Tanner in the 81 racing the #90 of Gary — Photo credit: Feeny Call Photography" loading="lazy" src="June 27th and 28th/Credit to Feeny Call Photography - Tanner in the 81 racing the %2390 of Gary.jpg"/></div>
 <div class="gallery-item"><img alt="Tanner in the 81 — Photo credit: Feeny Call Photography" loading="lazy" src="June 27th and 28th/Credit to Feeny Call Photography - Tanner in the 81.jpg"/></div>
 </div>
 </div>
@@ -1675,7 +1715,12 @@
       <span class="flag-icon" style="font-size:1.1rem">📸</span>
 </div>
 <div class="gallery-grid">
-
+<div class="gallery-item gallery-wide"><img alt="Tanner in the 81 racing side-by-side down the front stretch — Photo credit: Wilson's Photography" loading="lazy" src="May 30th 2026/709881325_10174730394650545_1361224439913149834_n.jpg"/></div>
+<div class="gallery-item"><img alt="Graydon in the 16s working through traffic — Photo credit: Ben Stott Photography" loading="lazy" src="May 30th 2026/710478285_17932646109272321_2060593051024919651_n.jpg"/></div>
+<div class="gallery-item"><img alt="Tanner in the 81 mid-corner — Photo credit: Danielle McPherson Photography & Writing" loading="lazy" src="May 30th 2026/712447520_967138732778088_7908513545484804712_n.jpg"/></div>
+<div class="gallery-item gallery-wide"><img alt="Graydon in the 16s exiting the corner — Photo credit: Wilson's Photography" loading="lazy" src="May 30th 2026/712704476_10174730390955545_8783283497175456655_n.jpg"/></div>
+<div class="gallery-item"><img alt="Matt in the 82 on track in front of the Sauble Speedway grandstands" loading="lazy" src="May 30th 2026/received_1040442231656747.jpeg"/></div>
+<div class="gallery-item"><img alt="Tanner in the 81 racing through a pack of cars at Sauble Speedway" loading="lazy" src="May 30th 2026/received_2013877699254624.jpeg"/></div>
 </div>
 </div>
 
